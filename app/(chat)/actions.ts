@@ -21,6 +21,7 @@ export async function generateTitleFromUserMessage({
 }: {
   message: CoreUserMessage;
 }) {
+  console.log('message: ', message);
   const { text: title } = await generateText({
     model: customModel('gpt-4o-mini'),
     system: `\n

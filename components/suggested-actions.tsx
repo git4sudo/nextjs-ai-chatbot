@@ -9,21 +9,26 @@ interface SuggestedActionsProps {
   chatId: string;
   append: (
     message: Message | CreateMessage,
-    chatRequestOptions?: ChatRequestOptions,
+    chatRequestOptions?: ChatRequestOptions
   ) => Promise<string | null | undefined>;
 }
 
 function PureSuggestedActions({ chatId, append }: SuggestedActionsProps) {
   const suggestedActions = [
+    // {
+    //   title: 'What is the weather',
+    //   label: 'in San Francisco?',
+    //   action: 'What is the weather in San Francisco?',
+    // },
+    // {
+    //   title: 'Help me draft an essay',
+    //   label: 'about Silicon Valley',
+    //   action: 'Help me draft a short essay about Silicon Valley',
+    // },
     {
-      title: 'What is the weather',
-      label: 'in San Francisco?',
-      action: 'What is the weather in San Francisco?',
-    },
-    {
-      title: 'Help me draft an essay',
-      label: 'about Silicon Valley',
-      action: 'Help me draft a short essay about Silicon Valley',
+      title: 'I am down with fever,',
+      label: 'can you asses?',
+      action: 'I am down with fever, can you assess',
     },
   ];
 
